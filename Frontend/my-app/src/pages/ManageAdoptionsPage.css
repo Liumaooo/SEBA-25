@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.manage-adoptions-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  padding-top: 80px; /* Added to ensure title is visible below header */
+}
+
+.page-title {
+  text-align: left;
+  padding: 0 24px 14px;
+  font-weight: 700;
+  margin: 32px 24px;
+  font-size: 28px;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 28px;
+  padding: 0 24px 64px;
+  /* Responsive grid: 1–4 columns depending on screen width */
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+/* Individual cat card */
+.cat-card {
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+}
+
+.cat-card img { 
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background-color: rgb(255, 249, 231);
+}
+
+.cat-card:focus-visible {
+  box-shadow: 0 0 0 3px #000, 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon buttons inside the card */
+.card-icon {
+  position: absolute;
+  top: 5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.icon-edit { 
+  right: 5px; 
+}
+
+.icon-delete { 
+  left: 5px; 
+}
+
+/* Bottom info box overlays the photo */
+.card-info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0;
+  background-color: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  border-radius: 6px 6px 0 0;
+  padding: 2px 16px 6px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-info .MuiTypography-subtitle1,
+.card-info .MuiTypography-caption {
+  color: #fff;
+  margin-left: 8px;
+  line-height: 1.4;
+}
+
+.card-info .MuiTypography-subtitle1 {
+  font-weight: 600;
+}
+
+/* Status badge for draft/published */
+.status-badge {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  z-index: 10;
+}
+
+.status-draft {
+  background-color: #ff9800;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.status-published {
+  background-color: #4caf50;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+} 
+
+/* Delete confirmation dialog overlay */
+.delete-dialog-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-dialog {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  padding: 32px 24px 24px 24px;
+  min-width: 320px;
+  max-width: 90vw;
+} 

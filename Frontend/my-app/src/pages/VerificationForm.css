@@ -1,0 +1,120 @@
+/* EmailVerificationForm.css */
+
+.verification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+     /* Light background similar to your pages */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.verification-main {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 400px; /* Similar width to your login/signup forms */
+    box-sizing: border-box;
+}
+
+.verification-main h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2.2em; /* Adjust as needed */
+}
+
+.verification-main p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.verification-main p strong {
+    color: #9b6312; /* Highlight the email address */
+}
+
+.verification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form elements */
+}
+
+.verification-form input[type="text"] {
+    width: 100%;
+    background-color: black;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.verification-form input[type="text"]:focus {
+    border-color: #a67738; /* Focus color */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(166, 119, 56, 0.2); /* Light glow on focus */
+}
+
+/* Error and Success Messages */
+.verification-error {
+    color: #d32f2f; /* Standard error red */
+    font-size: 0.9em;
+    margin-top: -5px; /* Adjust spacing */
+    margin-bottom: 10px;
+}
+
+.verification-success {
+    color: #388e3c; /* Standard success green */
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.verification-info {
+    color: #1976d2; /* A neutral blue for info messages */
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+/* Optional: Adjust button styles if they differ from your Material-UI defaults */
+/* You're using MUI Button with inline sx prop, which takes precedence.
+   If you want to style them purely with CSS, you'd remove the sx prop from the Button components
+   and target them with classes or more specific selectors.
+   For example, if you add className="verify-button" to the confirm button:
+*/
+/*
+.verify-button {
+    background-color: #a67738;
+    color: #fff;
+    border: 2.5px solid #a67738;
+    // ... rest of your button styles
+}
+.verify-button:hover {
+    background-color: #925e20;
+    // ...
+}
+*/
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+    .verification-main {
+        padding: 25px;
+        margin: 0 15px; /* Add some margin on smaller screens */
+    }
+
+    .verification-main h1 {
+        font-size: 1.8em;
+    }
+
+    .verification-main p {
+        font-size: 0.9em;
+    }
+}

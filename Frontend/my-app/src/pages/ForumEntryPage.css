@@ -1,0 +1,312 @@
+/* Import Font Awesome for icons (CDN) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+/* Import Nunito for general text */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+
+body {
+  margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: #fff3c7;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.fe-header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    top: 10;
+    left: 1rem;
+    right: 4rem;
+}
+
+.fe-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.fe-nav a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+.fe-btn.dark {
+    background-color: black;
+    color: white;
+}
+
+.fe-btn.grey {
+    background-color: #444;
+    color: white;
+    flex-grow: 0.4; 
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: color 0.2s ease;
+  border: none;
+}
+
+.app-page-title .fas.fa-arrow-left {
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.app-page-title .fas.fa-arrow-left:hover {
+  color: #878787;
+}
+
+
+.fe-btn.grey:hover {
+  background-color: #8f8f8f;
+}
+
+
+
+/* Forum Detail Page Layout */
+.forum-detail-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 900px;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+.detail-content-wrapper {
+  width: 100%;
+  max-width: 1000px; 
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Detailed Forum Post Card */
+.detailed-forum-post-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.post-header-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.post-title-detail {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  flex-grow: 1; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+  flex-shrink: 1; /* Hinzugefügt oder sichergestellt, dass es da ist */
+  min-width: 0;   /* <--- DAS IST DER WICHTIGSTE ZUSATZ! */
+}
+
+.heart-icon-container-detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2em;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 5px;
+  flex-shrink: 0; 
+}
+
+.heart-icon-container-detail .fas.fa-heart.liked {
+  color: #FF6B6B;
+}
+
+.heart-icon-container-detail .likes-count {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.post-author-info-detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.author-avatar-detail {
+  width: 35px; 
+  height: 35px;
+  background-color: #B0B0B0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.author-name-detail {
+  font-weight: 600;
+  color: #333;
+}
+
+.post-description-detail {
+  font-size: 1em;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+.post-stats-detail {
+  display: flex;
+  gap: 25px;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 15px;
+  border-top: 1px solid #eee; 
+  padding-top: 15px;
+}
+
+/* Comments Section */
+.comments-section {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comments-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  
+}
+
+.comment-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.comment-author-avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #C0C0C0; 
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #333;
+}
+
+.comment-text {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+/* Add Comment Section */
+.add-comment-section {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-comment-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.comment-textarea,
+.comment-title-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comment-textarea:focus,
+.comment-title-input:focus {
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(190, 190, 190, 0.2);
+}
+
+.comment-title-input {
+    min-height: unset; 
+}
+
+.btn.submit-comment-btn {
+  background-color: #000000;
+  color: white;
+  align-self: flex-end; 
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.btn.submit-comment-btn:hover {
+  background-color: #333;
+}
+
+.back{
+    align-self: flex-start;
+}
+

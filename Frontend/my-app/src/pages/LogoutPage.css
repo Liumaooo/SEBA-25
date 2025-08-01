@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+/* Base body styles for the logout page */
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  background-color: #fff3c7;
+  min-height: 100vh;
+  /* flex-direction is not needed here, as body is not a flex container by default */
+}
+
+/* Container centers the card on the page */
+.logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50vh; 
+  padding: 150px;
+  box-sizing: border-box;
+}
+
+/* Card styling for the logout message */
+.logout-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Title styling */
+.logout-title {
+  font-size: 2em;
+  font-weight: 800;
+  color: #a67738;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Button styling */
+.logout-button {
+  padding: 12px 25px;
+  background-color: #a67738; 
+  color: white;
+  border: none;
+  border-radius: 30px; 
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 5px rgba(78, 57, 30, 0.3);
+}
+
+.logout-button:hover {
+  background-color: #925e20;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}

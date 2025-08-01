@@ -1,0 +1,157 @@
+.buyersubscription-main {
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.buyersubscription-main h1 {
+  font-size: 48px;
+  margin-bottom: 60px; 
+  margin-top: -20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.bs-plans {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bs-plan-card {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.bs-plan-card.popular {
+  margin-top: -15px;
+}
+
+.bs-plan-card.popular .tag {
+  width: 100%;
+  background-color: #444;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: -8px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.bs-price {
+  font-size: 22px;
+  margin: 10px 0 10px;
+}
+
+.bs-price span {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+ul li.disabled {
+  color: #bbb;
+}
+
+
+.sellersubscription-main {
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.sellersubscription-main h1 {
+  font-size: 48px;
+  margin-top: -20px;
+  margin-bottom: 60px;
+  text-align: center;
+  z-index: 1;
+}
+
+.ss-plans {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ss-plan-card {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.ss-plan-card.popular {
+  margin-top: -15px;
+}
+
+.ss-plan-card.popular .tag {
+  width: 100%;
+  background-color: #444;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: -40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+
+.ss-price {
+  font-size: 22px;
+  margin: 10px 0 20px;
+}
+
+.ss-price span {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+ul li.disabled {
+  color: #bbb;
+}
+

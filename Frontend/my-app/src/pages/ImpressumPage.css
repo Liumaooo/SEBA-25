@@ -1,0 +1,68 @@
+.impressum-container {
+  min-height: 100vh;
+  background-color: #fff3c7;
+  padding: 80px 20px 40px 20px;
+}
+
+.impressum-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 40px;
+}
+
+.impressum-content h1 {
+  color: #F7B267;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.impressum-section {
+  margin-bottom: 30px;
+}
+
+.impressum-section h2 {
+  color: #a67738;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #f6ecd7;
+  padding-bottom: 8px;
+}
+
+.impressum-section h3 {
+  color: #a67738;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+}
+
+.impressum-section p {
+  color: #5c4326;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.impressum-section strong {
+  color: #a67738;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .impressum-content {
+    padding: 30px 20px;
+  }
+  
+  .impressum-content h1 {
+    font-size: 2rem;
+  }
+  
+  .impressum-section h2 {
+    font-size: 1.2rem;
+  }
+} 

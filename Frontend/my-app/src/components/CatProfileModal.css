@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/* Modal overlay: covers the whole screen with semi-transparent background */
+.cat-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(34, 34, 34, 0.16);
+  z-index: 1200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cat-modal-image {
+  width: 100%;
+  max-width: 400px; 
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+
+/* Modal content container */
+.cat-modal-content {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(70, 56, 75, 0.17);
+  padding: 0;
+  min-width: 320px;
+  max-width: 95vw;
+  max-height: 95vh;
+  width: 1000px;
+  position: relative;
+  animation: fadeInUp 0.25s cubic-bezier(.19,1,.22,1);
+  overflow-y: auto;
+  margin-top: 60px; /* Push modal down below header */
+}
+
+/* Simple fade-in animation for modal */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Close button in the top right */
+.cat-modal-close {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 2.1rem;
+  color: #8b8b8b;
+  cursor: pointer;
+  transition: color 0.15s;
+  z-index: 10;
+}
+.cat-modal-close:hover {
+  color: #e65c5c;
+}
+
+/* CatProfileDisplay Styles */
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #fff3c7;
+}
+
+/* Cat Profile Display Specific Styles */
+.cpd-overall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.cpd-main-wrapper {
+  max-width: 1000px; 
+  width: 95%; 
+  margin: 40px auto 50px auto;
+  padding: 20px 0; 
+  box-sizing: border-box;
+}
+
+.cpd-page-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  text-align: left;
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+.cpd-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 30px; 
+  align-items: start;
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+.cpd-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.cpd-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.cpd-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px; 
+  box-sizing: border-box;
+}
+
+/* Cat Main Info Card */
+.cpd-cat-main-info-card {
+  text-align: center;
+  padding: 20px 25px; 
+}
+
+.cpd-cat-image {
+  width: 100%;
+  max-width: 1000px; 
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover; 
+}
+
+.cpd-cat-name-gender {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: black;
+  margin: 0;
+}
+
+/* Seller Card */
+.cpd-seller-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cpd-section-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left; 
+}
+
+.cpd-seller-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cpd-seller-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ddd;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+        .cpd-seller-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cpd-seller-name-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cpd-seller-name {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: black;
+            text-align: left;
+        }
+
+.cpd-seller-profile-link {
+  font-size: 0.9em;
+  color: #333;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.cpd-seller-profile-link:hover {
+  text-decoration: underline;
+}
+
+/* Description Card */
+.cpd-description-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.cpd-description-text {
+  font-size: 1em;
+  color: black;
+  line-height: 1.6;
+  white-space: pre-wrap; 
+  text-align: left;
+}
+
+/* Details Card */
+.cpd-details-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cpd-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.cpd-detail-item {
+  font-size: 0.95em;
+  color: #555;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #eee; 
+}
+
+.cpd-detail-item:last-child {
+  border-bottom: none; 
+  padding-bottom: 0;
+}
+
+.cpd-detail-item strong {
+  color: black;
+  font-weight: 600;
+  flex-shrink: 0; 
+  margin-right: 10px; 
+}
+
+.cpd-detail-item span {
+  text-align: right; 
+  flex-grow: 1; 
+}
+
+/* Buttons in Right Column */
+.cpd-message-btn,
+.cpd-report-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%; 
+  padding: 12px 20px;
+  font-size: 1.1em;
+  border-radius: 12px; 
+  font-weight: 700;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.cpd-message-btn {
+  background-color: black; 
+  color: white;
+}
+.cpd-message-btn:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cpd-report-btn {
+  background-color: #F0F0F0; 
+  color: #555;
+}
+.cpd-report-btn:hover {
+  background-color: #E0E0E0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cpd-no-rating {
+  display: block;
+  text-align: left;
+  color: #555;
+  font-size: 1em;
+  margin-left: 0;
+  padding-left: 0;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cat-modal-content {
+    width: 95vw;
+    max-height: 90vh;
+    margin: 10px;
+    margin-top: 60px;
+  }
+  
+  .cpd-content-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cpd-page-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .cpd-main-wrapper {
+    margin: 20px auto 30px auto;
+    padding: 10px 0;
+  }
+  
+  .cpd-card {
+    padding: 15px;
+  }
+  
+  .cpd-cat-name-gender {
+    font-size: 1.5em;
+  }
+}

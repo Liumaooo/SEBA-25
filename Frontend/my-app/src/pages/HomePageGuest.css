@@ -1,0 +1,630 @@
+/* ==========================================================================
+   HomePageGuest.css - Styles for the guest landing page
+   ========================================================================== */
+
+/* Global Styles */
+body { 
+  margin: 0; 
+  overflow-x: hidden; 
+}
+
+/* ==========================================================================
+   Hero Section - Main landing area with background image
+   ========================================================================== */
+.hero {
+  position: relative;     
+  left: 50%;              
+  width: 100vw;           
+  margin-left: -50vw;     
+  min-height: 100vh;
+  background: url('../assets/Homepage_bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 60px 0;        
+  box-sizing: border-box;
+}
+
+/* Hero text container with transparent background */
+.hero-text {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0); /* fully transparent */
+}
+
+/* Main hero title */
+.hero-text h1 {
+  font-size: clamp(50px, 6vw, 60px);   
+  font-weight: 700;                    
+  color: #F7B267;                        
+  text-shadow: 0 2px 6px rgba(0,0,0,.35);  
+  margin: 80px 110px 24px;
+  text-align: center;
+}
+
+/* Hero subtitle */
+.hero-text p {
+  font-size: clamp(30px, 2.5vw, 24px);
+  color: #F7B267;
+  text-shadow: 0 1px 4px rgba(0,0,0,.35);
+  max-width: 28ch;                     
+  line-height: 1.5;
+  margin: 10px 10px 32px 20px;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Target Audience Section - How platform helps different user types
+   ========================================================================== */
+.target-audience {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.target-audience h2 {
+  text-align: center;
+  color: #D4943A;
+  font-size: 2rem;
+  margin-bottom: 28px;
+}
+
+/* Audience cards container */
+.audience-cards {
+  display: flex;
+  gap: 28px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Individual audience card */
+.audience-card {
+  flex: 1 1 210px;
+  min-width: 210px;
+  max-width: 260px;
+  background: #FFF7E1;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  padding: 24px 18px;
+  text-align: center;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.audience-card h3 {
+  color: #D4943A;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.audience-card p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Link to subscription plans */
+.audience-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #a67738;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.18s;
+}
+
+.audience-link:hover, 
+.audience-link:focus {
+  color: #925e20;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   About Us Section - Platform introduction with side images
+   ========================================================================== */
+.about-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 40px;
+  max-width: 1100px;
+  margin: 80px auto 40px auto;
+}
+
+/* Side image containers */
+.about-side-image {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 80px;
+}
+
+.about-side-img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #fff;
+  transition: width 0.2s, height 0.2s;
+}
+
+/* About card with platform description */
+.about-card {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-card .about-icon {
+  margin-bottom: 10px;
+}
+
+.about-card h2 {
+  color: #D4943A;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.about-card p {
+  color: #444;
+  font-size: 1.08rem;
+  margin: 0;
+}
+
+.about-cat-img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: block;
+}
+
+/* ==========================================================================
+   Services Section - Platform features overview
+   ========================================================================== */
+.services-card {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-card h2 {
+  color: #D4943A;
+  font-size: 2rem;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Services grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* Individual service square */
+.service-square {
+  background: #FFF7E1;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  width: 150px;
+  height: 150px;
+  padding: 18px 8px 12px 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  margin-bottom: 0;
+  transition: box-shadow 0.2s;
+}
+
+.service-square:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.13);
+}
+
+.service-icon {
+  margin-bottom: 10px;
+  font-size: 36px !important;
+}
+
+.service-square span {
+  color: #444;
+  font-size: 1rem;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Services row layout with side images */
+.services-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.service-side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 80px;
+}
+
+.service-side-img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #fff;
+  transition: width 0.2s, height 0.2s;
+}
+
+/* ==========================================================================
+   Subscription Plans Section - Pricing tiers
+   ========================================================================== */
+.subscription-card {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 36px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription-card h2 {
+  color: #D4943A;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.subscription-desc {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+/* Plan category labels */
+.plans-label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #888;
+  margin: 32px 0 12px 0;
+}
+
+.plans-label-buyer {
+  margin-top: 0;
+}
+
+/* Plans grid layout */
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 28px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Individual plan square */
+.plan-square {
+  background: #FFF7E1;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  padding: 28px 12px 18px 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
+  position: relative;
+}
+
+.plan-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #D4943A;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 2px 10px;
+}
+
+/* Disabled plan features */
+.plan-disabled {
+  color: #bbb !important;
+  text-decoration: line-through;
+}
+
+.plan-icon {
+  margin-bottom: 10px;
+}
+
+.plan-square h3 {
+  color: #D4943A;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.plan-price {
+  color: #444;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Plan features list */
+.plan-square ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-square li {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  text-align: left;
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.plan-square li:before {
+  content: '\2022';
+  color: #D4943A;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* ==========================================================================
+   Feedback Section - User testimonials
+   ========================================================================== */
+.feedback-section {
+  max-width: 900px;
+  margin: 80px auto 60px auto;
+  padding: 0 12px;
+}
+
+.feedback-card-container {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 36px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-title {
+  text-align: center;
+  color: #D4943A;
+  font-size: 2rem;
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.feedback-list {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+/* Individual feedback card */
+.feedback-card {
+  display: flex;
+  align-items: center;
+  background: #FFF7E1;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 28px;
+  gap: 36px;
+  min-height: 100px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feedback-left {
+  flex-direction: row;
+}
+
+.feedback-right {
+  flex-direction: row-reverse;
+}
+
+.feedback-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.feedback-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feedback-text {
+  font-size: 1.13rem;
+  color: #444;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.feedback-user {
+  color: #D4943A;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   Contact Section - Company contact information
+   ========================================================================== */
+.contact-section {
+  max-width: 900px;
+  margin: 120px auto 60px auto;
+  padding: 0 12px;
+  position: relative;
+}
+
+.contact-image-container {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.contact-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-card-container {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 36px 28px;
+  text-align: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-title {
+  text-align: center;
+  color: #D4943A;
+  font-size: 2rem;
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.contact-description {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Individual contact item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  background: #FFF7E1;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 16px 24px;
+  gap: 16px;
+  min-height: 60px;
+  transition: box-shadow 0.2s;
+}
+
+.contact-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.13);
+}
+
+.contact-icon {
+  flex-shrink: 0;
+}
+
+.contact-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-details h3 {
+  color: #D4943A;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.contact-details p {
+  color: #444;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+
+

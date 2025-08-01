@@ -1,0 +1,80 @@
+.preferences-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* ---- Intro section styles ---- */
+.intro-wrapper {
+  width: clamp(320px, 90vw, 780px);  /* same outer width as card        */
+  margin: 76px auto 32px;
+  text-align: left;
+}
+
+.intro-wrapper h4 {
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+/* ---- Preferences form card ---- */
+.form-paper {
+  position: relative;
+  width: clamp(320px, 90vw, 780px);
+  margin-inline: auto;
+  border-radius: 16px;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 96px 56px 120px;          /* 56 px left/right                */
+  min-height: 760px;
+}
+
+/* Reset Preferences pill button */
+.reset-btn {
+  position: absolute;
+  top: -90px;
+  right: -290px;
+  border-radius: 999px;
+  text-transform: none;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.reset-btn:hover {
+  background-color: #f6e7b3;
+}
+
+/* Filter row layout: label | control */
+.filter-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 0 24px;
+}
+.filter-row + .filter-row {
+  margin-top: 32px; /* vertical gap between rows */
+}
+.form-label {
+  font-weight: 700;
+}
+
+.label-with-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.info-btn {
+  padding: 0;
+}
+
+.required-asterisk {
+  color: #FF6B6B; /* Red asterisk for location fields (postal code, country) */
+  margin-left: 3px;
+}
+
+/* CTA button inside card */
+.cta-inside {
+  display: flex;
+  justify-content: center;
+  margin-top: -56px;
+}

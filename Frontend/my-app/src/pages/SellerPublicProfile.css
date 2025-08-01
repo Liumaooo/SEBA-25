@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #fff3c7;
+}
+
+/* --- Seller Public Profile Layout --- */
+.sp-overall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sp-main-wrapper {
+  max-width: 1000px; 
+  width: 95%; 
+  margin: 40px auto 50px auto;
+  padding: 20px 0; 
+  box-sizing: border-box;
+}
+
+.sp-page-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 25px;
+  text-align: left;
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+.sp-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  gap: 30px; 
+  align-items: start; 
+  width: 100%;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+.sp-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.sp-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.sp-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 25px; 
+  box-sizing: border-box;
+}
+
+/* --- Seller Profile Card (Left Column) --- */
+.sp-profile-card {
+  text-align: center;
+}
+
+.sp-profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative; 
+}
+
+.sp-profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+
+.sp-profile-name {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: black;
+  margin: 0;
+}
+
+.sp-profile-name-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  flex-grow: 1; 
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.sp-member-since {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.sp-profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  width: 100%; 
+  margin-bottom: 15px;
+}
+
+.sp-profile-details .sp-detail-item {
+  font-size: 0.95em;
+  color: #555;
+  gap: 10px;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  flex-grow: 1; 
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.sp-profile-details .sp-detail-item strong {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 0; 
+  display: flex; 
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-profile-details .sp-detail-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Cat Adoptions Section (Right Column) --- */
+.sp-section-title {
+  font-size: 1.6em; 
+  font-weight: 700;
+  color: black;
+  margin-bottom: 15px; 
+  padding: 0; 
+  text-align: left;
+}
+
+.sp-adoptions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+}
+
+.sp-cat-adoption-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none; 
+  color: inherit; 
+}
+
+.sp-cat-adoption-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sp-cat-adoption-image {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover; 
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.sp-cat-adoption-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sp-cat-adoption-name {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: black;
+  margin: 0;
+}
+
+.sp-cat-adoption-location {
+  font-size: 0.85em;
+  color: #666;
+  margin: 0;
+}
+
+.sp-cat-adoption-fee {
+  font-size: 1em;
+  font-weight: 600;
+  color: green; 
+  margin-top: 5px;
+}
+
+.sp-cat-adoption-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.2s ease;
+}
+
+.sp-cat-adoption-link:hover {
+  text-decoration: underline;
+}
+
+.sp-no-adoptions {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}

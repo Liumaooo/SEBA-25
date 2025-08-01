@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: #fff3c7
+}
+
+.app-container .seller-profile-wrapper {
+    width: 100%;  
+}
+
+.sp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    
+}
+
+.sp-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sp-nav a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+
+
+.seller-main{
+     /* Adjust to the height of your navbar */
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 17rem;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+h2 {
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.subscription{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.profile-card{
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: black;
+    flex-wrap: wrap;
+
+}
+
+.profile-pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.circle{
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+}
+
+.edit{
+    margin-top: 0.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.info p{
+    margin: 0.5re, 0;
+    text-align: left;
+
+}
+
+.profile-name-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.info-2 p{
+    text-align: left;
+    margin: 0.5re, 0;
+
+}
+
+.actions{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    margin-top: 6rem;
+}
+
+.adoptions{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start
+}
+
+
+.details{
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start
+}
+
+
+.main {          
+border-radius: 15px;     
+padding: 30px;
+margin-top: 30px;
+ }
+
+ 
+
+
+.info {
+            flex-grow: 1;
+            max-width: 46%; 
+    min-width: 300px; /* Sicherstellen, dass es nicht zu schmal wird */
+    margin: 0.5rem 
+
+        }
+
+        .info h3 {
+            font-size: 1.8em;
+            margin: 0 0 15px 0;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .info p {
+            margin: 0 0 10px 0;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .info p strong {
+            color: #333;
+        }
+
+        .info-2 h3 {
+            font-size: 1.8em;
+            margin: 0 0 15px 0;
+            color: #333;
+            font-weight: 800;
+        }
+
+        .info-2 p {
+            margin: 0 0 10px 0;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .info-2 p strong {
+            color: #333;
+        }
+        /* Form-Styles for Editing Fields */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 700;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .profile-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .profile-input:focus {
+            border-color: black;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+        }
+
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            margin-left: auto; 
+            flex-wrap: wrap; 
+            justify-content: flex-end; 
+        }
+
+        /* Buttons */
+        .sp-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            white-space: nowrap; 
+            font-weight : bold ;
+        }
+
+        .sp-btn.light {
+            background-color: #E0E0E0; 
+            color: #333;
+            border-radius: 8px;
+            font-weight : bold ;
+        }
+
+        .sp-btn.light:hover {
+            background-color: #ccc;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sp-btn.primary { 
+            background-color: grey;
+            color: white;
+            border-radius: 8px;
+            font-weight : bold ;
+
+        }
+
+        .sp-btn.primary:hover {
+            background-color: black;
+            box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+        }
+
+        .sp-btn.danger {
+            background-color: #dc3545; 
+            color: white;
+            border-radius: 8px;
+            font-weight : bold ;
+        }
+
+        .sp-btn.danger:hover {
+            background-color: #c82333;
+            box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+        }
+.pp-modal-overlay {
+            position:fixed;
+            top: 0;
+            left: 0;
+            right: 0; 
+            bottom: 0; 
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+            
+        }
+
+        .pp-modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            top: 50%; 
+            left: 50%; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .subscription-modal-content {
+            max-width: 700px; 
+            padding: 40px;
+            gap: 30px; 
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            color: #333;
+        }
+
+        .modal-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subscription-details-section,
+        .plan-selection-section,
+        .payment-details-section,
+        .cancel-section {
+            background-color: #F8F4EA; 
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .subscription-details-section h3,
+        .plan-selection-section h3,
+        .payment-details-section h3 {
+            font-size: 1.4em;
+            font-weight: 800;
+            color: #333;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .current-plan-name {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: black;
+            margin: 0;
+        }
+
+        .current-plan-price {
+            font-size: 1.2em;
+            color: #555;
+            margin: 0;
+        }
+
+        .current-end-date {
+            font-size: 1.2em;
+            color: #666;
+            margin: 0;
+        }
+        .subscription-end-date strong {
+            color: #333;
+        }
+
+        .subscription-action-btn {
+             
+            margin-top: 10px;
+        }
+
+        .payment-method,
+        .next-billing {
+            font-size: 1.2em;
+            color: #666;
+            margin: 0;
+        }
+        .payment-method strong,
+        .next-billing strong {
+            color: #333;
+        }
+
+        .payment-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .payment-action-btn {
+            flex-grow: 1;
+            min-width: 150px;
+        }
+
+        .cancel-section {
+            text-align: center;
+        }
+
+        .cancel-subscription-btn {
+            width: auto; 
+            padding: 10px 30px; 
+        }
+
+        .plan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsives Layout */
+    gap: 20px;
+}
+
+.plan-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.plan-item:hover {
+    transform: translateY(-5px);
+    border-color: #007bff;
+}
+
+.plan-item.current-plan {
+    border: 2px solid #28a745; /* Grüner Rahmen für den aktuellen Plan */
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.2);
+}
+
+.plan-item h4 {
+    color: #007bff;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.plan-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.plan-features li {
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.plan-item .bp-btn {
+    width: 100%;
+}
+
+.plan-item .bp-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666;
+}
+
+.subscription-details {
+  margin: 0 auto 24px auto;
+  max-width: 400px;
+  padding: 18px 0 8px 0;
+}
+.subscription-detail-item {
+  text-align: center;
+  font-size: 1.12em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subscription-detail-item strong {
+  color: #007bff;
+}
+
+.subscription-action-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.profile-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1em;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            resize: none; 
+        }
+
+

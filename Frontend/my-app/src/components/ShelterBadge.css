@@ -1,0 +1,89 @@
+/* Shelter Badge Component Styles */
+.shelter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.shelter-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.shelter-icon {
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+.shelter-text {
+  font-size: 0.75em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Size variants */
+.shelter-badge-small {
+  padding: 3px 6px;
+  border-radius: 10px;
+}
+
+.shelter-badge-small .shelter-icon {
+  font-size: 0.8em;
+}
+
+.shelter-badge-small .shelter-text {
+  font-size: 0.65em;
+}
+
+.shelter-badge-medium {
+  padding: 5px 10px;
+  border-radius: 14px;
+}
+
+.shelter-badge-medium .shelter-icon {
+  font-size: 1em;
+}
+
+.shelter-badge-medium .shelter-text {
+  font-size: 0.8em;
+}
+
+.shelter-badge-large {
+  padding: 6px 12px;
+  border-radius: 16px;
+}
+
+.shelter-badge-large .shelter-icon {
+  font-size: 1.1em;
+}
+
+.shelter-badge-large .shelter-text {
+  font-size: 0.85em;
+}
+
+/* Animation for when badge appears */
+@keyframes badgeAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.shelter-badge {
+  animation: badgeAppear 0.3s ease-out;
+} 

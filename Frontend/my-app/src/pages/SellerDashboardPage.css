@@ -1,0 +1,295 @@
+/* SellerDashboardPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+.dashboard-container {
+  background-color: #fff3c7;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 400px;
+  overflow: hidden;
+}
+
+.dashboard-card.kpi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Vertically center */
+  align-items: center;      /* Horizontally center */
+  text-align: center;
+  gap: 12px;                /* Spacing between elements */
+  padding: 1.5rem;
+}
+
+/* KPI Card Title */
+.dashboard-card.kpi h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* KPI Main Number */
+.dashboard-card.kpi h2 {
+  font-size: 3rem;       /* Emphasize main data */
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+/* Trend Info */
+.dashboard-card.kpi .trend {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.trend.up {
+  color: green;
+}
+.trend.down {
+  color: red;
+}
+
+/* Middle Summary Section */
+.summary-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.adoption-summary .summary-row {
+  margin-bottom: 1rem;
+}
+
+.progress-bar-wrapper {
+  width: 100%;
+  background: #eee;
+  border-radius: 6px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+.progress-bar.open {
+  background: red;
+}
+
+.progress-bar.completed {
+  background: green;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end; /* Bars align bottom */
+  justify-content: space-between; /* Spread bars */
+  gap: 1rem;
+  height: 150px;
+  padding: 0 10px;
+}
+
+.bar-item {
+  display: flex;
+  flex-direction: column; /* Vertical layout: bar on top, label below */
+  align-items: center;
+  width: 50px;
+}
+
+.bar-item span {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+}
+
+.bar {
+  width: 100%;
+  background-color: #0a4d0a;
+  border-radius: 4px;
+  transition: height 0.3s ease;
+}
+
+/* Review Adoptions Section */
+.review-adoptions .adoption-entry {
+  border: 1px solid #ddd;
+  overflow: visible;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Spacing */
+  min-width: 280px;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.status.open {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.line-chart-container {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+}
+
+.adoption-summary,
+.payment-summary,
+.review-adoptions {
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #ccc transparent; /* Firefox */
+}
+
+/* Custom scrollbar for Chrome/Safari */
+.adoption-summary::-webkit-scrollbar,
+.payment-summary::-webkit-scrollbar,
+.review-adoptions::-webkit-scrollbar {
+  width: 6px;
+}
+.adoption-summary::-webkit-scrollbar-thumb,
+.payment-summary::-webkit-scrollbar-thumb,
+.review-adoptions::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+.adoption-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.adoption-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 70%; /* Limit max width to avoid squeezing right side */
+  overflow: hidden;
+}
+
+.cat-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.adoption-cat-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cat-name {
+  font-weight: bold;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.status-tag {
+  flex-shrink: 0;
+  white-space: nowrap; 
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-tag.open {
+  color: red;
+  border: 1px solid red;
+}
+
+.status-tag.completed {
+  color: green;
+  border: 1px solid green;
+}
+
+.adoption-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.adoption-date {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.cat-meta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.open-cats-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.open-cats-icon {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.open-cats-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4px;
+}
+

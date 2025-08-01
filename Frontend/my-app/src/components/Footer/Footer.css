@@ -1,0 +1,32 @@
+/* Footer */
+.footer {
+  background-color: #fff3c7;
+  padding: 20px 0;
+  margin-top: 60px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.04);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.footer-content p {
+  color: #5c4326;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.impressum-link {
+  color: #a67738;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.impressum-link:hover {
+  color: #925e20;
+  text-decoration: underline;
+} 

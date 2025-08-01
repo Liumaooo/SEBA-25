@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.watchlist-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  font-family: "Nunito", sans-serif;
+}
+
+.page-title {
+  text-align: left;
+  padding: 0 24px 14px;
+  font-weight: 700;
+  margin: 32px 24px;
+  font-size: 28px;
+}
+
+/* Container for the grid of cat cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive: at least 2 per row if space allows */
+  gap: 32px;
+  justify-items: center;
+  margin-top: 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cat-card {
+  position: relative;
+  width: 320px;
+  aspect-ratio: 1 / 1; /* Square card */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.cat-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+}
+
+.cat-card .MuiCardMedia-root {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #eee;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.cat-card .card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 12px 16px 8px 16px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cat-card .card-icon {
+  position: absolute;
+  z-index: 4;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.cat-card .icon-chat {
+  top: 8px;
+  left: 8px;
+}
+
+.cat-card .icon-heart {
+  top: 8px;
+  right: 8px;
+}
+
+/* Card info overlay at the bottom of the card (merged rules for clarity) */
+.cat-card .card-info, .card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding: 12px 16px 8px 16px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  backdrop-filter: blur(6px);
+  border-radius: 6px 6px 0 0;
+  align-items: baseline;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card-info .MuiTypography-subtitle1,
+.card-info .MuiTypography-caption {
+  color: #fff;
+  margin-left: 8px;         /* little gap after the name line */
+  line-height: 1.4;
+}
+
+.card-info .MuiTypography-subtitle1 {
+  font-weight: 600;
+}

@@ -1,0 +1,136 @@
+/* =============================
+   Seller Subscription Page CSS
+   ============================= */
+
+/* ----- Main Container & Title ----- */
+.sellersubscription-main {
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.sellersubscription-main h1 {
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ----- Plans Layout ----- */
+.ss-plans {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* =============================
+   Plan Card Styles
+   ============================= */
+.ss-plan-card {
+  background-color: #F9DFA7;
+  color: black;
+  border-radius: 30px;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Popular Card (Most Popular) */
+.plan-card.popular {
+  margin-top: -15px;
+}
+
+.ss-plan-card.popular .ss-tag {
+  width: 100%;
+  background-color: #f6bc56;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: -25px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+/* =============================
+   Price & Feature List
+   ============================= */
+.ss-price {
+  font-size: 22px;
+  margin: 10px 0 20px;
+}
+
+.ss-price span {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+/* Disabled feature (greyed out) */
+ul li.disabled,
+.ss-disabled {
+  color: #bbb;
+}
+
+/* =============================
+   Button Styles
+   ============================= */
+.ss-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn.buy {
+  background-color: white;
+  color: black;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 30px;
+  font-size: 1.125rem;
+  border-radius: 20px;
+}
+
+.btn.buy .stripe-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.btn.disabled {
+  background-color: #555;
+  color: #ccc;
+  cursor: default;
+  border-radius: 20px;
+}
+
+.btn.unavailable {
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  border: 1px solid #bbb;
+  opacity: 0.7;
+  border-radius: 20px;
+}

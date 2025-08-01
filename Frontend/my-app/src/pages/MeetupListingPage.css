@@ -1,0 +1,557 @@
+/* Import Font Awesome for icons (CDN) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+/* Import Nunito for general text */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+/* General body styles - should ideally be in a global CSS file */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff3c7; 
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.ml-header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    
+}
+
+.ml-logo {
+  font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.ml-header-nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.ml-nav-item {
+  margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.ml-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ml-btn.login-btn {
+  background-color: transparent;
+  color: #555;
+  box-shadow: none;
+}
+
+.ml-btn.login-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.ml-btn.signup-btn {
+  background-color: #FF6B6B;
+  color: white;
+  box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+}
+
+.ml-btn.signup-btn:hover {
+  background-color: #e05c5c;
+  box-shadow: 0 4px 8px rgba(255, 107, 107, 0.4);
+}
+
+/* Meetup Listing Page Layout */
+        .meetup-page-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          box-sizing: border-box;
+          padding-bottom: 50px;
+          margin-top: 50px;
+        }
+
+        .back {
+            align-self: flex-start; /* Button links ausrichten */
+            margin-left: 5%; /* Passend zum Rest des Layouts */
+            margin-top: 20px;
+            margin-bottom: 0px;
+            border-radius: 10px; /* Quadratischere Form */
+        }
+
+
+        /* Use .app-page-title from App.css for main titles */
+
+        .meetup-page-buttons{
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: flex-start; /* Buttons rechts ausrichten */
+            gap: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            margin-left: 0;
+        }
+
+        .create-meetup, .edit-meetup {
+          
+            border-radius: 10px; /* Quadratischere Form */
+            padding: 10px 20px; /* Größere Buttons */
+            font-weight: 700;
+            box-shadow: none;
+            margin-bottom: 0; /* Entfernt den unteren Margin */
+            
+        }
+        .create-meetup {
+            background-color: #333;
+            color: white;
+        }
+        .create-meetup:hover {
+            background-color: #555;
+        }
+        .edit-meetup {
+            background-color: #6c757d;
+            color: white;
+        }
+        .edit-meetup:hover {
+            background-color: #5a6268;
+        }
+
+
+        .meetup-list-area {
+          display: flex;
+          flex-direction: column; 
+          gap: 25px; 
+          width: 90%;
+          max-width: 1200px;
+          box-sizing: border-box;
+        }
+
+        /* Meetup Listing Card */
+        .meetup-listing-card {
+          background-color: white;
+          border-radius: 15px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+          padding: 20px;
+          display: flex;
+          gap: 20px;
+          align-items: flex-start; 
+          box-sizing: border-box;
+          
+          flex-wrap: nowrap; 
+          cursor: pointer; /* Zeigt an, dass der Post anklickbar ist */
+          transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+          min-height: 100px; 
+          width: 800px;
+            }
+
+        .meetup-listing-card:hover {
+            transform: translateY(-5px); /* Leichter Hoch-Effekt beim Hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Stärkerer Schatten beim Hover */
+        }
+
+        
+
+.app-page-title .fas.fa-arrow-left {
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.app-page-title .fas.fa-arrow-left:hover {
+  color: #878787;
+}
+
+
+
+
+        .meetup-date-box {
+          background-color: #F8F4EA;
+          border-radius: 10px;
+          padding: 10px 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 70px; 
+          flex-shrink: 0;
+          text-align: center;
+        }
+
+        .meetup-month {
+          font-size: 0.9em;
+          font-weight: 700;
+          color: #FF6B6B;
+          margin-bottom: 2px;
+        }
+
+        .meetup-day {
+          font-size: 2em; 
+          font-weight: 800;
+          color: #333;
+          line-height: 1;
+        }
+
+        .meetup-details-content {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          min-width: 0;
+          justify-content: space-between; /* Verteilt den verfügbaren vertikalen Platz */
+
+        }
+
+        .meetup-title {
+          text-align: left;
+          font-size: 1.8em; /* Angepasst */
+          font-weight: 900;
+          color: #333;
+          margin: 0;
+          word-wrap: break-word;    /* Stellt den Umbruch von langen Wörtern sicher */
+  overflow-wrap: break-word; /* Moderne Alternative */
+  flex-grow: 1;              /* Nimmt verfügbaren Platz im flex-container ein */
+  flex-shrink: 1;            /* Erlaubt dem Titel zu schrumpfen */
+  min-width: 0
+        }
+
+        .meetup-description {
+          font-size: 0.95em;
+          color: #666;
+          margin: 0;
+          line-height: 1.5;
+          text-align: left;
+          word-wrap: break-word;    /* Stellt den Umbruch von langen Wörtern sicher */
+  overflow-wrap: break-word; /* Moderne Alternative */
+  flex-grow: 1;              /* Nimmt verfügbaren Platz im flex-container ein */
+  flex-shrink: 1;            /* Erlaubt dem Titel zu schrumpfen */
+  min-width: 0
+        }
+
+        .meetup-info-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          font-size: 0.85em;
+          color: #555;
+          margin-top: 5px;
+        }
+
+        .meetup-info-item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          word-wrap: break-word;    /* Stellt den Umbruch von langen Wörtern sicher */
+  overflow-wrap: break-word; /* Moderne Alternative */
+  flex-shrink: 1;            /* Erlaubt dem Titel zu schrumpfen */
+  min-width: 0
+        }
+
+        .meetup-info-item .fas {
+          color: #777;
+        }
+
+        .meetup-tags {
+          display: flex;
+          color: white; 
+          flex-wrap: wrap;
+          gap: 5px;
+          font-size: 0.75em;
+          margin-top: 10px;
+        }
+
+        .meetup-tag {
+          background-color: #E0E0E0;
+          color: white;
+          padding: 4px 8px;
+          border-radius: 5px;
+          font-weight: 600;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+
+        .meetup-actions {
+          flex-shrink: 0; 
+          margin-left: auto; 
+          align-self: flex-end;
+        }
+
+        .view-details-btn { /* Angepasster Selektor und Stil */
+          background-color: #FF6B6B;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 10px;
+          font-weight: 700;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s ease, box-shadow 0.2s ease;
+          align-self: flex-end;
+        }
+        .view-details-btn:hover {
+            background-color: #e05c5c;
+            box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Modal Styles - Common to both AddMeetupModal & ManageMeetupsModal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-height: 90vh; /* Begrenzt die Höhe des Modals */
+            overflow-y: auto; /* Aktiviert Scrollen bei Bedarf */
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            color: #333;
+        }
+
+        .modal-title {
+            font-size: 1.8em;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Add Meetup Form Styles */
+        .add-meetup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.95em;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            border-color: #FF6B6B;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        /* Manage Meetups List Styles */
+        .no-meetups-message {
+            text-align: center;
+            color: #777;
+            font-style: italic;
+            padding: 20px 0;
+        }
+
+        .modal-meetup-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 400px; /* Begrenzt die Höhe der Liste im Modal */
+            overflow-y: auto;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .modal-meetup-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed #f0f0f0;
+            gap: 15px;
+        }
+
+        .modal-meetup-item:last-child {
+            border-bottom: none;
+        }
+
+        .modal-meetup-title {
+            font-size: 1.05em;
+            color: #333;
+            font-weight: 600;
+            flex-grow: 1;
+            text-align: left;
+            word-wrap: break-word;    /* Stellt den Umbruch von langen Wörtern sicher */
+  overflow-wrap: break-word; /* Moderne Alternative */
+  flex-grow: 1;              /* Nimmt verfügbaren Platz im flex-container ein */
+  flex-shrink: 1;            /* Erlaubt dem Titel zu schrumpfen */
+  min-width: 0
+        }
+
+        .modal-item-actions {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .delete-meetup-btn {
+            background-color: #FF6B6B;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .delete-meetup-btn:hover {
+            background-color: #e05c5c;
+            box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+        }
+
+        .view-meetup-modal-btn {
+            background-color: #E0E0E0; /* Hellgrau */
+            color: #333; /* Schwarzer Text */
+            padding: 8px 15px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .view-meetup-modal-btn:hover {
+            background-color: #ccc; /* Dunkleres Grau beim Hover */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Confirm Dialog Styles */
+        .confirm-dialog-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+            border-radius: 15px;
+        }
+
+        .confirm-dialog-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 80%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .confirm-dialog-message {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+        .confirm-dialog-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .confirm-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .confirm-btn.confirm-yes {
+            background-color: #FF6B6B;
+            color: white;
+        }
+
+        .confirm-btn.confirm-yes:hover {
+            background-color: #e05c5c;
+            box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+        }
+
+        .confirm-btn.confirm-no {
+            background-color: #E0E0E0;
+            color: #555;
+        }
+
+        .confirm-btn.confirm-no:hover {
+            background-color: #d0d0d0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }

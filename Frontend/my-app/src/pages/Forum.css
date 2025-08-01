@@ -1,0 +1,637 @@
+/* Import Font Awesome for icons (CDN) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+/* Import Nunito for general text */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: #fff3c7;
+    width: 100%; 
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+ /* align-items: center; */
+  width: 100%;
+  box-sizing: border-box; /* Include padding in element's total width and height */
+
+}
+
+
+/* Header Styles */
+.f-header {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    width: 100%;
+    top: 10;
+    left: 1rem;
+    right: 4rem;
+}
+
+.f-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.f-nav a{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+
+.f-btn.dark {
+    background-color: black;
+    color: white;
+}
+
+.f-btn.grey {
+    background-color: #444;
+    color: white;
+}
+
+.f-btn:hover,
+.f-btn:focus{
+  outline: none !important; 
+}
+
+/* Forum Page Layout */
+.forum-page-container {
+  display: flex;
+  flex-direction: column;
+ /* align-items: center; */
+  width: 1200px;
+  box-sizing: border-box;
+  padding-bottom: 50px; 
+
+}
+
+.page-main-title {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2.2em;
+  font-weight: 800; 
+  color: #000000;
+  /* padding-left: 0px; */
+  box-sizing: border-box;
+  display: flex; 
+}
+
+.main-content-area {
+  display: flex;
+  gap: 40px; 
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; 
+  padding: 0 30px; 
+ /* max-width: 1200px;*/
+  box-sizing: border-box;
+  flex-wrap: wrap; 
+  justify-content: center; 
+}
+
+.left-column-posts {
+  flex: 2; 
+  min-width: 450px; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px; 
+}
+
+.right-column-sidebar {
+  flex: 1; 
+  min-width: 300px; 
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+/* Forum Post Card */
+.forum-post-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  min-height: 180px; 
+  box-sizing: border-box;
+  cursor: pointer; /* Zeigt an, dass der Post anklickbar ist */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.forum-post-card:hover {
+            transform: translateY(-5px); /* Leichter Hoch-Effekt beim Hover */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Stärkerer Schatten beim Hover */
+        }
+
+.post-image-placeholder {
+  width: 140px; 
+  height: 140px; 
+  background-color: #000000; 
+  border-radius: 10px;
+  flex-shrink: 0; 
+}
+
+.post-content-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+  min-width: 0;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.post-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  color: #333;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  flex-grow: 1; 
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.heart-icon-container {
+  font-size: 1.5em;
+  flex-shrink: 0; 
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  padding: 5px; 
+}
+
+.heart-icon-container .fas.fa-heart.liked {
+  color: #FF6B6B; 
+}
+
+
+.post-author-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.author-avatar-small {
+  width: 25px;
+  height: 25px;
+  background-color: #B0B0B0; 
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.post-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8em;
+  color: #777;
+  margin-top: auto; 
+}
+
+/* New Post Section (Sidebar) */
+.new-post-section {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.new-post-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.new-post-textarea:focus,
+.post-title-input:focus {
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(190, 190, 190, 0.2);
+}
+
+.post-title-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  
+}
+
+.post-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between; 
+  flex-wrap: wrap; 
+}
+
+.f-btn.create-post-btn {
+  flex-grow: 0.10; 
+  padding: 10px 15px;
+  border-radius: 10px; 
+  font-weight: 700;
+  box-shadow: none; 
+  cursor: pointer;
+  transition: color 0.2s ease;
+  border: none;
+
+  
+
+}
+
+.f-btn.manage-posts-btn {
+  flex-grow: 0.4; 
+  padding: 10px 8px;
+  border-radius: 10px; 
+  font-weight: 700;
+  box-shadow: none; 
+  cursor: pointer;
+  transition: color 0.2s ease;
+  border: none;
+
+}
+
+
+.f-btn.create-post-btn:hover {
+  background-color: #a9a6a6;
+  outline: none !important; 
+}
+
+.f-btn.manage-posts-btn:hover {
+  background-color: #918f8f;
+  outline: none !important; 
+}
+
+/* Meetups Section (Sidebar) */
+.meetups-section {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.meetups-title {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  word-wrap: break-word; /* Ältere Browser-Kompatibilität */
+  overflow-wrap: break-word; /* Standard für moderne Browser */
+  flex-grow: 1;
+  flex-shrink: 1; 
+  min-width: 0;
+  
+}
+
+.meetups-title .fas.fa-arrow-right {
+  color: #333;
+}
+
+.meetup-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  color: #FF6B6B;
+  cursor: pointer; /* Added for clickable area */
+  transition: background-color 0.2s ease-in-out; /* Added for hover effect */
+  padding: 10px; /* Add some padding so hover effect doesn't feel cramped */
+  margin: -10px; /* Counteract padding to maintain layout */
+  border-radius: 10px; /* Match overall card design */
+}
+
+.meetup-item:hover {
+    background-color: #f5f5f5; /* Light hover effect */
+}
+
+.meetup-date-box {
+  background-color: #000000; 
+  border-radius: 10px;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 55px; 
+  flex-shrink: 0;
+}
+
+
+.meetup-day {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1; 
+}
+
+.meetup-details {
+  flex-grow: 1;
+}
+
+.meetup-title {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 5px 0;
+  line-height: 1.3;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+.meetup-tags {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 5px;
+  font-size: 0.75em;
+  color: black;
+}
+
+.meetup-tag {
+  background-color: black; 
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: 600;
+  white-space: nowrap; 
+}
+
+.meetup-location {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 5px; /* Added some margin for spacing */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+.meetup-location .fas.fa-map-marker-alt {
+    color: #888; /* Adjust icon color if needed */
+}
+
+/* Loading and No Meetups Messages */
+.loading-message, .no-meetups-message {
+    text-align: center;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content{
+  background-color: white;
+  padding: 30px; 
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal-close-btn {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    background: none;
+                    border: none;
+                    font-size: 1.8em;
+                    cursor: pointer;
+                    color: #999;
+                    transition: color 0.2s ease;
+                }
+
+                .modal-close-btn:hover {
+                    color: #333;
+                }
+
+                .modal-title {
+                    font-size: 1.8em;
+                    font-weight: 800;
+                    color: #333;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                .no-posts-message {
+                    text-align: center;
+                    color: #777;
+                    font-style: italic;
+                    padding: 20px 0;
+                }
+
+                .modal-post-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    max-height: 400px; /* Begrenzte Höhe für Scrollbarkeit */
+                    overflow-y: auto; /* Scrollbalken bei Bedarf */
+                    border-top: 1px solid #eee;
+                    padding-top: 15px;
+                }
+
+                .modal-post-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 12px 0;
+                    border-bottom: 1px dashed #f0f0f0; /* Dezente Trennlinie */
+                    gap: 15px; /* Abstand zwischen Titel und Button */
+                }
+
+                .modal-post-item:last-child {
+                    border-bottom: none;
+                }
+
+                .modal-post-title {
+                    font-size: 1.05em;
+                    color: #333;
+                    font-weight: 600;
+                    flex-grow: 1; /* Nimmt verfügbaren Platz ein */
+                    text-align: left;
+                    word-wrap: break-word; /* Ältere Browser-Kompatibilität */
+                    overflow-wrap: break-word; /* Standard für moderne Browser */
+                    flex-grow: 1;
+                    flex-shrink: 1; 
+                    min-width: 0;
+                    
+                }
+
+                .delete-post-btn {
+                    background-color: #FF6B6B; /* Roter Button für Löschen */
+                    color: white;
+                    padding: 8px 15px;
+                    border: none;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+                    flex-shrink: 0; /* Verhindert das Schrumpfen des Buttons */
+                }
+
+                .delete-post-btn:hover {
+                    background-color: #e05c5c;
+                    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+                }
+
+                .view-post-btn {
+                  background-color: black; /* Roter Button für Löschen */
+                    color: white;
+                    padding: 8px 15px;
+                    border: none;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+                    flex-shrink: 0;
+                }
+
+                .view-post-btn:hover {
+                    background-color: grey;
+                    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+                }
+
+                /* Confirm Dialog Styles */
+                .confirm-dialog-overlay {
+                    position: absolute; /* Innerhalb des Modals positionieren */
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.9); /* Halbdurchsichtig weiß */
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1001; /* Über dem Modal-Inhalt */
+                    border-radius: 15px; /* Angleichen an Modal-Content */
+                }
+
+                .confirm-dialog-content {
+                    background-color: white;
+                    padding: 25px;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                    text-align: center;
+                    width: 80%;
+                    max-width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .confirm-dialog-message {
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    color: #333;
+                    margin: 0;
+                }
+
+                .confirm-dialog-actions {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                }
+
+                .confirm-btn {
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+                }
+
+                .confirm-btn.confirm-yes {
+                    background-color: #FF6B6B; /* Roter Button für Ja */
+                    color: white;
+                }
+
+                .confirm-btn.confirm-yes:hover {
+                    background-color: #e05c5c;
+                    box-shadow: 0 2px 5px rgba(255, 107, 107, 0.3);
+                }
+
+                .confirm-btn.confirm-no {
+                    background-color: #E0E0E0; /* Grauer Button für Nein */
+                    color: #555;
+                }
+
+                .confirm-btn.confirm-no:hover {
+                    background-color: #d0d0d0;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+
+

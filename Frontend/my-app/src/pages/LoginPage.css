@@ -1,0 +1,58 @@
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 280px 40px;
+}
+
+.login-main h1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+  margin-top: 30px; 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.login-main-btn {
+  padding: 14px 32px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.forgot-password-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+/* Footer styles for the login page */
+.login-footer {
+  margin-top: 60px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
